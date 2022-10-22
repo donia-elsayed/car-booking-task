@@ -4,7 +4,6 @@ const Statistic = () => {
   let url = "https://mocki.io/v1/ccc1ce3d-d829-475e-b770-dee86939ca24";
   useEffect(() => {
     getStatisticsData();
-    console.log(statisticData);
   }, []);
 
   function getStatisticsData() {
