@@ -1,6 +1,6 @@
 const RewardElement = (props) => {
   return (
-    <div className={`rounded py-5 ${props.styleElm} md:w-2/4 lg:w-auto`}>
+    <div className={`rounded py-5 ${props.styleElm} md:w-3/5 lg:w-auto`}>
       <div className="flex justify-between">
         <h2 className="text-white font-bold text-[16.5px] leading-8 w-1/12">
           You have earned{" "}

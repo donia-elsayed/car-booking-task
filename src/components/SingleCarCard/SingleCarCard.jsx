@@ -13,7 +13,7 @@ const SingleCarCard = (props) => {
       </div>
       <span className="block capitalize text-[#72767C]">coupe</span>
       <img src={singleCarData.carImage} alt="" className="mx-auto my-5" />
-      <div className="flex justify-between">
+      <div className="flex lg:justify-between sm:flex-wrap flex-nowrap sm:justify-center justify-between">
         <div className="flex gap-5">
           <div className="flex gap-1">
             <img src={images.personIcon} alt="" />

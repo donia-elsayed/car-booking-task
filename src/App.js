@@ -9,7 +9,7 @@ function App() {
       <div className="xl:w-1/6">
         <Sidebar/>
       </div>
-      <div className="lg:w-5/6">
+      <div className="w-full">
         <Navbar/>
         <Routes>
           <Route path="/" element={<Dashboard/>}/>

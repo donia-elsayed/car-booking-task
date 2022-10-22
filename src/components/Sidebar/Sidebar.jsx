@@ -3,7 +3,7 @@ import SidebarElement from "../SidebarElement/SidebarElement";
 import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
-      <section className="bg-white top-0 left-0  h-full pl-6 w-56 fixed">
+      <section className="bg-white top-0 left-0 h-full pl-6 w-56">
         <div className="flex gap-3 items-center ml-2 my-7">
           <img
             src={images.logoIcon}

@@ -13,14 +13,14 @@ const Statistic = () => {
       .then((data) => setStatisticData(data.data));
   }
   return (
-    <section className="py-4 grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <section className="py-4 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       {statisticData?.map((item, index) => (
         <div
           className={`py-[22px] px-[30px] h-[266px] bg-white text-center rounded-2xl hover:${item.hoverColor} hover:text-white`}
           key={index}
         >
           <div
-            className={`rounded-full py-2 mb-2 m-auto ${item.color}`}
+            className={`w-9 h-9 rounded-full py-2 mb-2 m-auto ${item.color}`}
           >
             <img src={item.image} alt="" className="m-auto" />
           </div>
