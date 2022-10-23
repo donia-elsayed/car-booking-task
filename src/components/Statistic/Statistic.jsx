@@ -24,7 +24,7 @@ const Statistic = () => {
             <img src={item.image} alt="" className="m-auto" />
           </div>
           <h4 className="text-lg font-medium mb-5">{item.title}</h4>
-          <div className="flex justify-center items-center w-[100px] h-[100px] mx-auto mb-5 rounded-full border-8 border-solid border-[#F4F5F9] border-b-transparent">
+          <div className="relative flex justify-center items-center w-[100px] h-[100px] mx-auto mb-5 rounded-full border-8 border-solid border-[#F4F5F9] border-b-transparent">
             <span className="text-xl font-semibold">{item.percentage}</span>
           </div>
         </div>

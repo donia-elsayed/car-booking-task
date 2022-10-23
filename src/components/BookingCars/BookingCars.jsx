@@ -18,11 +18,8 @@ const BookingCars = () => {
       .then((response) => response.json())
       .then((data) => setAllCarsData(data.data));
   }
-  const filteredCarsByNames = allCarsData.filter(
-    (car) => car.carName === carName
-  );
-  const filteredCarsByTypes = allCarsData.filter(
-    (car) => car.carType === carType
+  const filteredCars = allCarsData.filter(
+    (car) => car.carName === carName || car.carType === carType
   );
   useEffect(() => {
     getAllCarsData();
@@ -48,6 +45,7 @@ const BookingCars = () => {
             className="w-30 h-10 rounded-3xl px-6 m-auto"
             onChange={carNameChangeHandler}
           >
+            <option defaultValue="Cars Names">Cars Names</option>
             {allCarsData?.map((car, index) => (
               <option value={car.carName} key={index}>
                 {car.carName}
@@ -61,21 +59,13 @@ const BookingCars = () => {
         </div>
       </div>
       <div className="grid lg:grid-cols-3 lg:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 lg:gap-6 sm:gap-4 gap-3">
-        {filteredCarsByNames?.length > 0 ?
-            filteredCarsByNames?.map((carItem, index) => (
-              <SingleCarCard singleCarData={carItem} key={index} />
-            )) : allCarsData?.map((carItem, index) => (
+        {filteredCars?.length > 0
+          ? filteredCars?.map((carItem, index) => (
               <SingleCarCard singleCarData={carItem} key={index} />
             ))
-        }
-        {filteredCarsByTypes?.length > 0 ?
-          filteredCarsByTypes?.map((carItem, index) => (
-            <SingleCarCard singleCarData={carItem} key={index} />
-          )) : 
-          allCarsData?.map((carItem, index) => (
-            <SingleCarCard singleCarData={carItem} key={index} />
-          ))
-        }
+          : allCarsData?.map((carItem, index) => (
+              <SingleCarCard singleCarData={carItem} key={index} />
+            ))}
       </div>
     </section>
   );

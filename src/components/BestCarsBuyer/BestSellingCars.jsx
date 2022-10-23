@@ -11,7 +11,6 @@ const BestSellingCars = () => {
   }
   useEffect(() => {
     getCarData();
-    console.log(carsData);
   }, []);
   return (
     <section className="pt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
